@@ -11,10 +11,8 @@ WORKDIR /work
 RUN rm -rf simpleui
 #RUN apt-get install wget curl jq xz-utils -y
 RUN set -xe && \
-    apk add tzdata && \
     cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime && \
-    echo "Asia/Shanghai" > /etc/timezone && \
-    apk del tzdata
+    echo "Asia/Shanghai" > /etc/timezone
 RUN /usr/local/bin/python -m pip install --upgrade pip
 RUN pip3 install -r requirements.txt
 RUN set -x && \
