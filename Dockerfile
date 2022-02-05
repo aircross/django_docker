@@ -1,4 +1,4 @@
-FROM python:3.7
+FROM python:3.10.2
 MAINTAINER John <admin@vps.la>
 
 ENV DJANGO_VERSION 4.0.2
