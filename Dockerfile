@@ -25,7 +25,7 @@ RUN set -x && \
 	mkdir /django && \
 	cd /django && \
 	django-admin startproject home && \
-	rm -rf *.tar.gz
+	#rm -rf *.tar.gz
 
 #RUN pip3 install django-simpleui -U
 #https://github.com/django/django/releases/tag/4.0.2
