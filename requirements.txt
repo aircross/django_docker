@@ -1,0 +1,7 @@
+Django
+django-import-export
+Pillow
+docutils
+django-mdeditor
+markdown
+Pygments
