@@ -1,4 +1,4 @@
-FROM python:3.10.2
+FROM python:3.10.2-alpine3.15.0
 MAINTAINER John <admin@vps.la>
 
 ENV DJANGO_VERSION 4.0.2
@@ -11,10 +11,10 @@ WORKDIR /work
 RUN rm -rf simpleui
 #RUN apt-get install wget curl jq xz-utils -y
 RUN set -xe && \
-    #apk add tzdata && \
+    apk add tzdata && \
     cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime && \
-    echo "Asia/Shanghai" > /etc/timezone
-    #apk del tzdata
+    echo "Asia/Shanghai" > /etc/timezone && \
+    apk del tzdata
 RUN /usr/local/bin/python -m pip install --upgrade pip
 RUN pip3 install -r requirements.txt
 RUN set -x && \
