@@ -20,7 +20,7 @@ RUN set -xe && \
     cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime && \
     echo "Asia/Shanghai" > /etc/timezone && \
     apk del tzdata
-RUN /usr/local/bin/python -m pip install --upgrade pip
+#RUN /usr/local/bin/python -m pip install --upgrade pip
 
 
 ENTRYPOINT ["python"]
