@@ -161,7 +161,6 @@ ADD . /work
 WORKDIR /work
 
 RUN rm -rf simpleui
-RUN apt-get install wget curl jq xz-utils -y
 RUN set -xe && \
     apk add tzdata && \
     cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime && \
