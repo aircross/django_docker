@@ -167,23 +167,26 @@ RUN set -xe && \
     echo "Asia/Shanghai" > /etc/timezone && \
     apk del tzdata
 RUN /usr/local/bin/python -m pip install --upgrade pip
-RUN pip3 install -r requirements.txt
-RUN set -x && \
-	#wget --no-check-certificate https://github.com/django/django/archive/refs/tags/${DJANGO_VERSION}.tar.gz && \ 
-	#tar xzf ${DJANGO_VERSION}.tar.gz && \
-	#python -m pip install -e django-${DJANGO_VERSION}/ && \
-	mkdir /django && \
-	cd /django && \
-	django-admin startproject home && \
-	#rm -rf *.tar.gz
 
-#RUN pip3 install django-simpleui -U
-#https://github.com/django/django/releases/tag/4.0.2
-#https://github.com/django/django/archive/refs/tags/4.0.2.zip
-#https://github.com/django/django/archive/refs/tags/4.0.2.tar.gz
-#git clone https://github.com/django/django.git
-EXPOSE 8080
 
-ENTRYPOINT ["python","/django/manage.py","runserver" ,"0.0.0.0:8080"]
+ENTRYPOINT ["python"]
+#RUN pip3 install -r requirements.txt
+#RUN set -x && \
+#	#wget --no-check-certificate https://github.com/django/django/archive/refs/tags/${DJANGO_VERSION}.tar.gz && \ 
+#	#tar xzf ${DJANGO_VERSION}.tar.gz && \
+#	#python -m pip install -e django-${DJANGO_VERSION}/ && \
+#	mkdir /django && \
+#	cd /django && \
+#	django-admin startproject home && \
+#	#rm -rf *.tar.gz
+#
+##RUN pip3 install django-simpleui -U
+##https://github.com/django/django/releases/tag/4.0.2
+##https://github.com/django/django/archive/refs/tags/4.0.2.zip
+##https://github.com/django/django/archive/refs/tags/4.0.2.tar.gz
+##git clone https://github.com/django/django.git
+#EXPOSE 8080
+#
+#ENTRYPOINT ["python","/django/manage.py","runserver" ,"0.0.0.0:8080"]
 
 
