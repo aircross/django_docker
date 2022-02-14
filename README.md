@@ -8,13 +8,13 @@
 **1、** 使用 Docker 部署
    1.1. 安装docker
 
-    ```shell
-    curl -fsSL https://get.docker.com | sh
-    # 设置开机自启
-    sudo systemctl enable docker.service
-    # 根据实际需要保留参数start|restart|stop
-    sudo service docker start|restart|stop
-    ```
+```shell
+curl -fsSL https://get.docker.com | sh
+# 设置开机自启
+sudo systemctl enable docker.service
+# 根据实际需要保留参数start|restart|stop
+sudo service docker start|restart|stop
+```
 
 
 
