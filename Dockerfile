@@ -19,7 +19,8 @@ RUN set -xe && \
     apk add tzdata && \
     cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime && \
     echo "Asia/Shanghai" > /etc/timezone && \
-    apk del tzdata
+    apk del tzdata && \
+    /usr/local/bin/python -m pip install --upgrade pip
 #RUN /usr/local/bin/python -m pip install --upgrade pip
 
 
