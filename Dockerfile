@@ -23,7 +23,7 @@ RUN set -xe && \
 #RUN /usr/local/bin/python -m pip install --upgrade pip
 
 
-RUN pip3 install -r requirements.txt
+RUN pip install -r requirements.txt
 # CMD /bin/sh
 #RUN set -x && \
 #	#wget --no-check-certificate https://github.com/django/django/archive/refs/tags/${DJANGO_VERSION}.tar.gz && \ 
