@@ -23,8 +23,8 @@ RUN set -xe && \
 #RUN /usr/local/bin/python -m pip install --upgrade pip
 
 
-CMD /bin/sh
-#RUN pip3 install -r requirements.txt
+RUN pip3 install -r requirements.txt
+# CMD /bin/sh
 #RUN set -x && \
 #	#wget --no-check-certificate https://github.com/django/django/archive/refs/tags/${DJANGO_VERSION}.tar.gz && \ 
 #	#tar xzf ${DJANGO_VERSION}.tar.gz && \
@@ -41,6 +41,6 @@ CMD /bin/sh
 ##git clone https://github.com/django/django.git
 #EXPOSE 8080
 #
-#ENTRYPOINT ["python","/django/manage.py","runserver" ,"0.0.0.0:8080"]
+ENTRYPOINT ["python","/django/manage.py","runserver" ,"0.0.0.0:8080"]
 
 
