@@ -1,4 +1,4 @@
-# frpc
+# Django Docker 运行环境
 ## 项目简介
 - Base System alpine 3.15
 - Python 3.10.2
